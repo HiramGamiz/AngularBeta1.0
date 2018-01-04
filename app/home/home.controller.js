@@ -1,15 +1,14 @@
 (function () {
-
+ 
   'use strict';
 
   angular
     .module('app')
     .controller('HomeController', homeController);
-
+  
   homeController.$inject = ['authService','$state', '$scope', '$filter', '$mdToast', '$stateParams', '$mdDialog', 'ProjectService', 'StageService', 'CategoryService', 'TypeService', 'MasterProjectService','WorkLogService', 'Logger', '$localStorage'];
 
   function homeController(authService,$state, $scope, $filter, $mdToast, $stateParams, $mdDialog, ProjectService, StageService, CategoryService, TypeService, MasterProjectService, WorkLogService, Logger, $localStorage) {
-
     var vm = this;
     vm.auth = authService;
     vm.allowed = {
@@ -186,6 +185,12 @@
           templateUrl: './views/project/logs.modal.html'
       });
   }
+
+
+
+
+
+
   }
 
 })();
