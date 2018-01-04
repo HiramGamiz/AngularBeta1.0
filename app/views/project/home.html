@@ -129,11 +129,9 @@
                                 type="button" aria-label="button-add" ng-click="vm.addLog(vm.logForm)">
                                 Añadir </md-button>
                         </div>
-
                     </form>
                     <br>
                     <br>
-
                 </div>
             </center>
         </div>
@@ -179,7 +177,50 @@
     <br>
     <br>
 </h4>
-<h4 ng-if="!vm.auth.isAuthenticated()">
-    Inicia Sesion!
-    <a ng-click="vm.auth.login()">Iniciar Sesion</a> to continue.
-</h4>
+<h4 ng-if="!vm.auth.isAuthenticated()" <div layout="row" layout-align="center center">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form flex="50" novalidate name="loginForm" md-whiteframe="2" layout-padding>
+        <section layout="row" layout-align="center">
+            <div flex="25">
+                <img src="../assets/logo.png " alt="Tesselar logo" style="width:100%;" />
+            </div>
+        </section>
+
+
+
+
+        <div layout="row" layout-align="center">
+            <md-button flex id="button-login" type="submit" class="md-primary md-raised" ng-disabled="loginForm.$invalid" aria-label="button-login"
+                ng-click="vm.auth.login()">
+                Iniciar sesión </md-button>
+        </div>
+    </form>
+    </div>
+    <br>
+    <br>
+    <!-- <a ng-click="vm.auth.login()">Iniciar Sesion</a> to continue. -->
+    </h4>

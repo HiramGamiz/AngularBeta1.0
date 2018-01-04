@@ -6,6 +6,7 @@
         .factory('EndPointService', EndPointService);
 
     EndPointService.inject = [];
+
     function EndPointService() {
         var test = true;
 
@@ -18,8 +19,8 @@
         ////////////////
         function get() {
             return 'https://' +
-                (test ? 'focusproxy.herokuapp.com/services' : '')
-                + '';
+                (test ? 'focusproxy.herokuapp.com/services' : '') +
+                '';
         }
     }
 })();

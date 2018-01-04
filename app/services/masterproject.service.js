@@ -5,13 +5,14 @@
         .module('app')
         .factory('MasterProjectService', MasterProjectService);
 
-        MasterProjectService.$inject = ['$http', 'EndPointService'];
+    MasterProjectService.$inject = ['$http', 'EndPointService'];
+
     function MasterProjectService($http, EndPointService) {
         var service = {
             get: get
         };
 
-        return service; 
+        return service;
 
         ////////////////
         function get() {

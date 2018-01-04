@@ -6,6 +6,7 @@
         .config(Configuration);
 
     Configuration.$inject = ['$mdThemingProvider', '$httpProvider'];
+
     function Configuration($mdThemingProvider, $httpProvider) {
 
         $mdThemingProvider.definePalette('green-lighten', {

@@ -6,6 +6,7 @@
         .factory('Logger', Logger);
 
     Logger.inject = ['$http', 'EndPointService'];
+
     function Logger($http, EndPointService) {
         var BASE_URL = EndPointService.get();
         var URL = BASE_URL + '/apexrest/Registros';

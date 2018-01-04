@@ -6,6 +6,7 @@
         .factory('httpInterceptorService', httpInterceptorService);
 
     httpInterceptorService.$inject = ['$injector', '$localStorage'];
+
     function httpInterceptorService($injector, $localStorage) {
         var service = {
             request: _request,

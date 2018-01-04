@@ -5,13 +5,14 @@
         .module('app')
         .factory('WorkLogService', WorkLogService);
 
-        WorkLogService.$inject = ['$http', 'EndPointService'];
+    WorkLogService.$inject = ['$http', 'EndPointService'];
+
     function WorkLogService($http, EndPointService) {
         var service = {
             get: get
         };
 
-        return service; 
+        return service;
 
         ////////////////
         function get() {

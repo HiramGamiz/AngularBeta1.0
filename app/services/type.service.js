@@ -5,13 +5,14 @@
         .module('app')
         .factory('TypeService', TypeService);
 
-    TypeService.$inject = ['$http' ];
+    TypeService.$inject = ['$http'];
+
     function TypeService($http) {
         var service = {
             get: get
         };
 
-        return service; 
+        return service;
 
         ////////////////
         function get() {

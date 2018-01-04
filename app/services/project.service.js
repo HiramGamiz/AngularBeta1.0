@@ -6,6 +6,7 @@
         .factory('ProjectService', ProjectService);
 
     ProjectService.inject = ['$http', 'EndPointService'];
+
     function ProjectService($http, EndPointService) {
         var BASE_URL = EndPointService.get();
         var URL = BASE_URL + '/apexrest/Proyectos';
