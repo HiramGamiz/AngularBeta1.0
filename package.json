@@ -21,6 +21,8 @@
     "bootstrap": "^3.3.7",
     "datatables": "^1.10.13",
     "express": "^4.14.0",
+    "moment": "^2.20.1",
+    "moment-timezone": "^0.5.14",
     "ngstorage": "^0.3.11"
   }
 }
