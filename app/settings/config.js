@@ -122,24 +122,24 @@
             'contrastDarkColors': ['50', '100', '200', '300', '400', '500', 'A100', 'A200', 'A400']
         });
 
-        $mdThemingProvider.definePalette('grey', {
-            '50': '#ffffff',
-            '100': '#ffffff',
-            '200': '#ffffff',
-            '300': '#ededec',
-            '400': '#dededd',
-            '500': '#cfcfcd',
-            '600': '#c0c0bd',
-            '700': '#b1b1ae',
-            '800': '#a2a29e',
-            '900': '#93938f',
-            'A100': '#ffffff',
-            'A200': '#ffffff',
-            'A400': '#dededd',
-            'A700': '#b1b1ae',
-            'contrastDefaultColor': 'light',
-            'contrastDarkColors': ['50', '100', '200', '300', '400', '500', '600', '700', '800', '900', 'A100', 'A200', 'A400', 'A700']
-        });
+        // $mdThemingProvider.definePalette('grey', {
+        //     '50': '#ffffff',
+        //     '100': '#ffffff',
+        //     '200': '#ffffff',
+        //     '300': '#ededec',
+        //     '400': '#dededd',
+        //     '500': '#cfcfcd',
+        //     '600': '#c0c0bd',
+        //     '700': '#b1b1ae',
+        //     '800': '#a2a29e',
+        //     '900': '#93938f',
+        //     'A100': '#ffffff',
+        //     'A200': '#ffffff',
+        //     'A400': '#dededd',
+        //     'A700': '#b1b1ae',
+        //     'contrastDefaultColor': 'light',
+        //     'contrastDarkColors': ['50', '100', '200', '300', '400', '500', '600', '700', '800', '900', 'A100', 'A200', 'A400', 'A700']
+        // });
 
         $mdThemingProvider.theme('default')
             .primaryPalette('purple-lighten', {
