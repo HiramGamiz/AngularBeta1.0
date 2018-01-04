@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('focus-track')
+        .module('app')
         .config(Configuration);
 
     Configuration.$inject = ['$mdThemingProvider', '$httpProvider'];
