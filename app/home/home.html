@@ -4,30 +4,36 @@
     <div class="col-md-3 col-sm-12 col-xs-12">
         <center>
             <div class="width100">
-                <span class="titulo">Tipo: </span>
-                <md-input-container>
-                    <md-select ng-model="vm.selectedtype" aria-label="Proyecto" placeholder="Tipo de proyecto" class="width100">
-                        <md-option ng-value="type" ng-repeat="type in vm.types">
-                            {{ type.name }}
-                        </md-option>
-                    </md-select>
-                </md-input-container>
+                    <md-input-container>
+                            <label>Tipo:</label>
+                            <md-select ng-model="vm.selectedtype" aria-label="Proyecto" placeholder="Tipo de proyecto" class="width100">
+                              <md-option><em>None</em></md-option>
+                              <md-option ng-repeat="type in vm.types" ng-value="type">
+                                    {{ type.name }}
+                              </md-option>
+                            </md-select>
+                          </md-input-container>
             </div>
         </center>
     </div>
     <div class="col-md-5 col-sm-12 col-xs-12">
         <center>
             <div class="width100">
-                <span class="titulo">Proyecto: </span>
-                <p ng-if="vm.projects.length === 0">No tienes proyectos</p>
-                <md-input-container ng-if="vm.projects.length > 0">
-                    <md-select class="hiddeLetters" ng-model="vm.selectedProject" aria-label="Proyecto" placeholder="Selecciona un proyecto"
-                        ng-change="vm.getLogs(vm.selectedProject)" >
-                        <md-option ng-value="project" ng-repeat="project in vm.projects" title="{{ project.projectName }} " ng-selected="$first">
-                            {{ project.projectName }}
-                        </md-option>
-                    </md-select>
-                </md-input-container>
+                    <md-input-container>
+                            <p ng-if="vm.projects.length === 0">
+                                    <label>Proyecto:</label>
+                                    No tienes proyectos</p>
+                            <md-input-container ng-if="vm.projects.length > 0">
+                                    <label>Proyecto:</label>
+                            <md-select  class="hiddeLetters" ng-model="vm.selectedProject" aria-label="Proyecto" placeholder="Selecciona un proyecto"
+                            ng-change="vm.getLogs(vm.selectedProject)">
+                              <md-option><em>None</em></md-option>
+                              <md-option ng-value="project" ng-repeat="project in vm.projects" title="{{ project.projectName }}" ng-selected="$first">
+                                    {{ project.projectName }}
+                              </md-option>
+                            </md-select>
+                          </md-input-container>
+             
             </div>
         </center>
     </div>
@@ -98,9 +104,8 @@
                             </div>
                 
                             <!-- Fecha -->
-                            <md-input-container flex>
-                                <input aria-label="Fecha" min-view="date" date-time auto-close="true" ng-model="vm.logForm.date" view="date"  format="DD/MM/YYYY"
-                                    name="FechaInicio" required>
+                            <md-input-container >
+                                <md-datepicker ng-model="ctrl.myDate" md-placeholder="Fecha de registro" md-open-on-focus></md-datepicker>
                             </md-input-container>
                         </div>
                 
