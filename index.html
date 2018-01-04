@@ -2,14 +2,18 @@
   <head>
     <title>Centralized Login</title>
     <base href="/">
+    
     <!-- Viewport settings-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
     <!-- Basic style -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./node_modules/angular-material/angular-material.css">
-   <link rel="stylesheet" href=".\node_modules\datatables\media\css\jquery.dataTables.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.css" type="text/css" media="all" /> 
+
+    <link rel="stylesheet" href=".\node_modules\datatables\media\css\jquery.dataTables.css">
+    
   </head>
   <body>
     <div ng-app="app">
@@ -21,7 +25,9 @@
       </div>
 
     </div>
-    
+
+    <!-- Libraries -->
+    <script type="text/javascript" src="./node_modules/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="auth0-variables.js"></script>
     <script type="text/javascript" src="node_modules/angular/angular.js"></script>
     <script src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.js'></script>
@@ -37,6 +43,9 @@
     <script type="text/javascript" src="app/app.js"></script>
     <script type="text/javascript" src="app/app.run.js"></script>
     <script type="text/javascript" src="app/navbar/navbar.directive.js"></script>
+    <script src=".\node_modules\datatables\media\js\jquery.dataTables.js"></script>
+
+    <!-- Services -->
     <script type="text/javascript" src="app/auth/auth.service.js"></script>
     <script src="./app/services/category.service.js"></script>    
     <script src="./app/services/type.service.js"></script>
@@ -48,7 +57,7 @@
     <script src="./app/services/project.service.js"></script>
     <script src="./app/services/end-point.service.js"></script>
 
-    <script src=".\node_modules\datatables\media\js\jquery.dataTables.js"></script>
+    <!-- App's views -->
     <script type="text/javascript" src="app/home/home.controller.js"></script>
     <script type="text/javascript" src="app/callback/callback.controller.js"></script>
     <script type="text/javascript" src="app/home/Datatable/work-log.controller.js"></script>
