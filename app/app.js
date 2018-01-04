@@ -26,14 +26,14 @@
         .state('home', {
           url: '/',
           controller: 'HomeController',
-          templateUrl: 'app/home/home.html',
+          templateUrl: 'app/views/project/home.html',
           controllerAs: 'vm'
         })
         .state('worklogs', {
           url: '/work-log',
           controller: 'WorkLogController',
           name: 'worklog',
-          templateUrl: 'app/home/Datatable/work-log.html',
+          templateUrl: 'app/views/project/work-log/work-log.html',
           controllerAs: 'vm'
         })
         .state('callback', {

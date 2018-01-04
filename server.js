@@ -18,8 +18,8 @@ app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-const hostname = '187.189.191.102';
-const port = 80;
+const hostname = 'quesnaybeta123456.herokuapp.com';
+const port = 443;
 
 const server = app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);  
