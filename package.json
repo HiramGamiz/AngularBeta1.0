@@ -23,6 +23,7 @@
     "express": "^4.14.0",
     "moment": "^2.20.1",
     "moment-timezone": "^0.5.14",
+    "nforce": "^1.9.0",
     "ngstorage": "^0.3.11"
   }
 }
