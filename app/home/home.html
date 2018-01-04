@@ -1,59 +1,51 @@
 <h4 ng-if="vm.auth.isAuthenticated()">
 <br>
 <div class="row">
-    <div class="col-md-3 col-sm-12 col-xs-12">
-        <center>
-            <div class="width100">
-                    <md-input-container>
-                            <label>Tipo:</label>
+        <div class="col-md-3 col-sm-12 col-xs-12">
+                <center>
+                    <div class="width100">
+                        <span class="titulo">Tipo: </span>
+                        <md-input-container>
                             <md-select ng-model="vm.selectedtype" aria-label="Proyecto" placeholder="Tipo de proyecto" class="width100">
-                              <md-option><em>None</em></md-option>
-                              <md-option ng-repeat="type in vm.types" ng-value="type" ng-selected="$first">
+                                <md-option ng-value="type" ng-repeat="type in vm.types"  ng-selected="$first">
                                     {{ type.name }}
-                              </md-option>
+                                </md-option>
                             </md-select>
-                          </md-input-container>
+                        </md-input-container>
+                    </div>
+                </center>
             </div>
-        </center>
-    </div>
-    <div class="col-md-5 col-sm-12 col-xs-12">
-        <center>
-            <div class="width100">
-                    <md-input-container>
-                            <p ng-if="vm.projects.length === 0">
-                                    <label>Proyecto:</label>
-                                    No tienes proyectos</p>
+            <div class="col-md-5 col-sm-12 col-xs-12">
+                    <center>
+                        <div class="width100">
+                            <span class="titulo">Proyecto: </span>
+                            <p ng-if="vm.projects.length === 0">No tienes proyectos</p>
                             <md-input-container ng-if="vm.projects.length > 0">
-                                    <label>Proyecto:</label>
-                            <md-select  class="hiddeLetters" ng-model="vm.selectedProject" aria-label="Proyecto" placeholder="Selecciona un proyecto"
-                            ng-change="vm.getLogs(vm.selectedProject)">
-                              <md-option><em>None</em></md-option>
-                              <md-option ng-value="project" ng-repeat="project in vm.projects" title="{{ project.projectName }}" ng-selected="$first">
-                                    {{ project.projectName }}
-                              </md-option>
-                            </md-select>
-                          </md-input-container>
-            </div>
-        </center>
-    </div>
+                                <md-select class="hiddeLetters" ng-model="vm.selectedProject" aria-label="Proyecto" placeholder="Selecciona un proyecto"
+                                    ng-change="vm.getLogs(vm.selectedProject)" >
+                                    <md-option ng-value="project" ng-repeat="project in vm.projects" title="{{ project.projectName }} " ng-selected="$first">
+                                        {{ project.projectName }}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                    </center>
+                </div>
     <div class="col-md-4 col-sm-12 col-xs-12">
-        <center>
-            <div class="width100">
-                <p ng-if="vm.projects.length === 0">
-                        <label>Etapa:</label>
-                        Este Proyecto no tiene Etapas</p>
-                <md-input-container ng-if="vm.stages.length > 0">
-                        <label>Etapa:</label>
-                    <md-select class="hiddeLetters" ng-model="vm.masterproject" aria-label="Proyecto" placeholder="Selecciona un proyecto">
-                            <md-option><em>None</em></md-option>
-                        <md-option ng-value="stage" ng-repeat="stage in vm.stages" title="{{ stage.stageName }}" ng-selected="$first">
-                            {{ stage.stageName }}
-                        </md-option>
-                    </md-select>
-                </md-input-container>
-            </div>
-        </center>
-    </div>
+            <center>
+                <div class="width100">
+                    <span class="titulo">Etapa: </span>
+                    <p ng-if="vm.projects.length === 0">Este Proyecto no tiene Etapas</p>
+                    <md-input-container ng-if="vm.stages.length > 0">
+                        <md-select class="hiddeLetters" ng-model="vm.masterproject" aria-label="Proyecto" placeholder="Selecciona un proyecto">
+                            <md-option ng-value="stage" ng-repeat="stage in vm.stages" title="{{ stage.stageName }}"  ng-selected="$first">
+                                {{ stage.stageName }}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+            </center>
+        </div>
 
 </div>
 <br>
@@ -64,17 +56,17 @@
                 <form md-whiteframe="" novalidate name="logForm">
                     <md-toolbar layout="row">
                         <div class="md-toolbar-tools">
-                            <span><i class="material-icons"></i> Registrar trabajo</span>
+                            <span><i class="material-icons">note_add</i> Registrar trabajo</span>
                         </div>
                     </md-toolbar>
                 
                     <div layout="column" layout-padding layout-margin class="align">
                 
                         <!-- Category -->
-                        <md-input-container >
-                            <label>Categoría</label>
+                        <md-input-container flex >
+                            <label><translate>Categoría</translate></label>
                             <md-select ng-model="vm.logForm.category" required>
-                                    <md-option><em>None</em></md-option>
+                                    <!-- <md-option><em>None</em></md-option> -->
                                 <md-option ng-repeat="category in vm.categories" ng-value="{{ category }}" placeholder="Selecciona una categoria">
                                     {{ category.categoryName }} 
                                 </md-option>
@@ -147,7 +139,7 @@
                     <md-toolbar layout="row">
                         <div class="md-toolbar-tools">
                             <span>
-                                <i class="material-icons"></i> Mis registros de trabajo </span>
+                                <i class="material-icons">alarm_on</i> Mis registros de trabajo </span>
                         </div>
                     </md-toolbar>
                     <md-list ng-if="vm.logs.length > 0">
