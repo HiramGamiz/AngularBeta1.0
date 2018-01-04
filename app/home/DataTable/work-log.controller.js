@@ -22,7 +22,6 @@
         function getWorkLogs(){
             return WorkLogService. get().then(function (data){
                 $(document).ready(function () {
-                    console.log('entrooooooooooooo')
                     $('#worklogs').DataTable({
                         data: data,
                         columns:[
