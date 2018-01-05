@@ -49,7 +49,7 @@
       domain: 'hiramgm.auth0.com',
       responseType: 'token id_token',
       audience: 'https://hiramgm.auth0.com/userinfo',
-      redirectUri: 'http://localhost:3000/callback',
+      redirectUri: 'http://localhost:5000/callback',
       scope: 'openid'
     });
 
