@@ -68,7 +68,7 @@
         function getLogs(project) {
             if (project) {
                 var filter = {
-                    //   codigoagente: $localStorage.authorizationData.username,
+                    //codigoagente: $localStorage.authorizationData.username,
                     idproyecto: project.idProyecto,
                     rechazado: 0,
                     limite: 500
@@ -78,10 +78,6 @@
                 });
             }
         }
-
-
-
-
         function addLog(log) {
             if (!log || (log.horas === 0)) {
                 $mdToast.show(

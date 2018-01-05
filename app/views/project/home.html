@@ -46,7 +46,6 @@
                 </div>
             </center>
         </div>
-
     </div>
     <br>
     <div class="row" ng-if="vm.selectedProject">
@@ -60,9 +59,7 @@
                                     <i class="material-icons">note_add</i> Registrar trabajo</span>
                             </div>
                         </md-toolbar>
-
                         <div layout="column" layout-padding layout-margin class="align">
-
                             <!-- Category -->
                             <md-input-container flex>
                                 <label>
@@ -88,7 +85,6 @@
                                         </md-select>
                                     </md-input-container>
                                 </div>
-
                                 <!-- Minutos -->
                                 <div>
                                     <md-input-container>
@@ -101,13 +97,11 @@
                                         </md-select>
                                     </md-input-container>
                                 </div>
-
                                 <!-- Fecha -->
                                 <md-input-container>
                                     <md-datepicker ng-model="ctrl.myDate" md-placeholder="Fecha de registro" md-open-on-focus></md-datepicker>
                                 </md-input-container>
                             </div>
-
                             <div layout="row">
                                 <md-input-container flex>
                                     <label> Comentario </label>
@@ -123,15 +117,14 @@
                                 </md-input-container>
                             </div>
                         </div>
-
                         <div layout="row" layout-align="end center">
                             <md-button id="button-add" class="md-primary md-raised" ng-disabled="logForm.$invalid || !vm.logForm.category || (vm.logForm.minutes === 0 && vm.logForm.hours === 0)"
                                 type="button" aria-label="button-add" ng-click="vm.addLog(vm.logForm)">
-                                Añadir </md-button>
+                                Añadir 
+                            </md-button>
                         </div>
                     </form>
-                    <br>
-                    <br>
+                    <br><br>
                 </div>
             </center>
         </div>
@@ -157,7 +150,6 @@
                                     <hr>
                                 </div>
                             </md-list-item>
-
                             <md-list-item ng-if="vm.logs.length > 5">
                                 <span flex></span>
                                 <md-button id="buttonViewMore" class="md-primary md-raised" aria-label="Ver todos los registros" ng-click="vm.showAllLogs($event)">
@@ -173,54 +165,23 @@
 
         </div>
     </div>
-    <br>
-    <br>
-    <br>
+    <br><br><br>
 </h4>
 <h4 ng-if="!vm.auth.isAuthenticated()" <div layout="row" layout-align="center center">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <form flex="50" novalidate name="loginForm" md-whiteframe="2" layout-padding>
         <section layout="row" layout-align="center">
             <div flex="25">
                 <img src="../assets/logo.png " alt="Tesselar logo" style="width:100%;" />
             </div>
         </section>
-
-
-
-
         <div layout="row" layout-align="center">
             <md-button flex id="button-login" type="submit" class="md-primary md-raised" ng-disabled="loginForm.$invalid" aria-label="button-login"
                 ng-click="vm.auth.login()">
-                Iniciar sesión </md-button>
+                Iniciar sesión 
+            </md-button>
         </div>
     </form>
     </div>
-    <br>
-    <br>
-    <!-- <a ng-click="vm.auth.login()">Iniciar Sesion</a> to continue. -->
-    </h4>
+    <br><br>
+</h4>

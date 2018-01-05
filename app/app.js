@@ -1,11 +1,9 @@
-// app/app.js
-
 (function () {
 
   'use strict';
 
   angular
-    .module('app', ['auth0.auth0', 'ui.router', 'ngMaterial', 'ngMessages',  'datePicker', 'angular-loading-bar', 'ngStorage'])
+     .module('app', ['auth0.auth0', 'ui.router', 'ngMaterial', 'ngMessages',  'datePicker', 'angular-loading-bar', 'ngStorage'])
     .config(config);
 
   config.$inject = [
