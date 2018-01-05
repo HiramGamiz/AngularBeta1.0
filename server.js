@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 var nforce = require('nforce');
-
+const PORT = process.env.PORT || 5000
 var org = nforce.createConnection({
   clientId: 'SOME_OAUTH_CLIENT_ID',
   clientSecret: 'SOME_OAUTH_CLIENT_SECRET',
@@ -18,9 +18,6 @@ app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-const hostname = 'quesnaybeta123456.herokuapp.com';
-const port = 443;
-
-const server = app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);  
-});
+const hostname = 'localhost';
+const port = 3000;
+const server = app.listen(PORT, () => console.log(`Listening on ${ PORT }`));

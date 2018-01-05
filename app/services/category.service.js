@@ -6,6 +6,7 @@
         .factory('CategoryService', CategoryService);
 
     CategoryService.$inject = ['$http', 'EndPointService'];
+
     function CategoryService($http, EndPointService) {
         var service = {
             get: get

@@ -5,13 +5,14 @@
         .module('app')
         .factory('StageService', StageService);
 
-        StageService.$inject = ['$http', 'EndPointService'];
+    StageService.$inject = ['$http', 'EndPointService'];
+
     function StageService($http, EndPointService) {
         var service = {
             get: get
         };
 
-        return service; 
+        return service;
 
         ////////////////
         function get() {

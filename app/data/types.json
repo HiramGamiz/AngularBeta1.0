@@ -1,10 +1,10 @@
-[
-    {   "value":"asignado",
+[{
+        "value": "asignado",
         "name": "Asigando"
     },
     {
-        "value":"grupo",
+        "value": "grupo",
         "name": "Por Grupo"
     }
-   
+
 ]

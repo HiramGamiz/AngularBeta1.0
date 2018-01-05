@@ -1,11 +1,11 @@
-(function() {
-  
+(function () {
+
   'use strict';
-  
+
   angular
     .module('app')
     .directive('navbar', navbar);
-    
+
   function navbar() {
     return {
       templateUrl: 'app/navbar/navbar.html',
@@ -15,10 +15,10 @@
   }
 
   navbarController.$inject = ['authService'];
-    
-  function navbarController(authService,Storage,$location) {
+
+  function navbarController(authService, Storage, $location) {
     var vm = this;
-     vm.auth = authService;
+    vm.auth = authService;
 
   }
   // function login(){
@@ -28,8 +28,8 @@
   //     $location.path('/home');
 
   //   });
-  
+
 
   // }
-  
+
 })();
